@@ -1,0 +1,634 @@
+Programming - I
+Homework 2
+
+1. Write a C program that takes three numbers from the user and finds the largest one. Do it the same way I did in the class.
+
+#include <stdio.h>
+
+int main() {
+  
+int ln;
+int num1;
+int num2;
+int num3;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+
+ln = num1;
+
+if (num2 > ln) {
+  ln = num2;
+}
+if (num3 > ln) {
+  ln = num3;
+}
+
+printf("The largest number is: %d \n", ln);
+
+return 0;
+}
+
+2. Write a C program that takes four numbers from the user and counts and prints to the terminal the number of odd numbers of the user input.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+int ans = 0;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+if (num1%2 == 1) {
+  ans = ans+1;
+}
+if (num2%2 == 1) {
+  ans = ans+1;
+}
+if (num3%2 == 1) {
+ ans = ans+1;
+}
+if (num4%2 == 1) {
+  ans = ans+1;
+}
+printf("The number of odd numbers: %d \n", ans);
+
+return 0;
+}
+
+3. Write a C program that takes four numbers from the user and counts and prints to the terminal the number of even numbers of the user input.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+int ans = 0;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+if (num1%2 == 0) {
+  ans = ans+1;
+}
+if (num2%2 == 0) {
+  ans = ans+1;
+}
+if (num3%2 == 0) {
+ ans = ans+1;
+}
+if (num4%2 == 0) {
+  ans = ans+1;
+}
+printf("The number of even numbers: %d \n", ans);
+
+return 0;
+}
+
+4. Write a C program that takes four numbers from the user and counts and prints to the terminal the number of even and odd numbers of the user input.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+int odd = 0;
+int even = 0;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+if (num1%2 == 1) {
+  odd = odd+1;
+}
+if (num2%2 == 1) {
+  odd = odd+1;
+}
+if (num3%2 == 1) {
+ odd = odd+1;
+}
+if (num4%2 == 1) {
+  odd = odd+1;
+}
+
+
+if (num1%2 == 0) {
+  even = even+1;
+}
+if (num2%2 == 0) {
+  even = even+1;
+}
+if (num3%2 == 0) {
+  even = even+1;
+}
+if (num4%2 == 0) {
+  even = even+1;
+}
+  
+printf("The number of odd numbers: %d \n", odd);
+printf("The number of odd numbers: %d \n", even);
+
+return 0;
+}
+
+5. Write a C program that takes four numbers from the user and counts and prints to the terminal “yes” if any of the numbers is greater ten, “no” otherwise.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+if (num1 > 10) {
+  printf("yes");
+}
+ else if (num2 > 10) {
+   printf("yes");
+  }
+  else if (num3 > 10) {
+    printf("yes");
+  }
+  else if (num4 > 10) {
+    printf("yes");
+  }
+  else
+    printf("no");
+
+return 0;
+}
+
+6. Write a C program that takes a number between zero and hundred from the user. If the number is less than 50 it should print “start studying”, if it is between 50 and 80 inclusive it prints “not too bad” or if it’s bigger than 80 then it prints “you are doing well”. If the number is out of the range of acceptable values less than 0 or bigger than 100 your program should yes, “please enter a valid number”.
+
+#include <stdio.h>
+
+int main() {
+
+int score;
+
+printf("Enter a number between 0 and 100.\n");
+scanf("%d", &score);
+
+if (score>=0 && score<50){
+  printf("Start studying.");
+}
+else if (score>=50 && score<=80){
+  printf("Not too bad.");
+}
+else if (score>80 && score<=100){
+  printf("You are doing well.");
+}
+else
+  printf("Please enter a valid number.");
+
+return 0;
+}
+
+7. Write a C program that takes four numbers from the user and finds the largest and smallest number and print them to the terminal.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+int ln;
+int sn;
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+ln = num1;
+if (ln<num2){
+  ln = num2;
+} 
+if (ln<num3){
+ ln = num3;
+}
+if (ln<num4){
+  ln = num4;
+}
+
+sn = num1;
+if (sn>num2){
+  sn = num2;
+}
+if (sn>num3){
+  sn = num3;
+}
+if (sn>num4){
+  sn = num4;
+}
+printf("The smallest number is: %d \nThe largest number is: %d", sn, ln);
+
+return 0;
+}
+
+8. Write a C program that takes four numbers from the user and prints their average to the terminal. When you are finding the average, make sure not to lose the fractional part.
+
+#include <stdio.h>
+
+int main() {
+
+float num1;
+float num2;
+float num3;
+float num4;
+float avg;
+
+printf("Enter a number.\n");
+scanf("%f", &num1);
+printf("Enter a number again.\n");
+scanf("%f" , &num2);
+printf("Enter a number again.\n");
+scanf("%f" , &num3);
+printf("Enter a number again.\n");
+scanf("%f" , &num4);
+
+avg = (num1+num2+num3+num4)/4;
+printf("Average: %f", avg);
+
+return 0;
+}
+
+9. Write a C program that takes four numbers from the user and prints to the terminal “yes” if any two numbers are the same. “NO” if no two numbers are the same.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+if (num1==num2){
+  printf("Yes");
+}
+else if (num1==num3){
+  printf("Yes");
+}
+else if (num1==num4){
+  printf("Yes");
+}
+else if (num2==num3){
+  printf("Yes");
+}
+else if (num2==num4){
+  printf("Yes");
+}
+else if (num3==num4){
+  printf("Yes");
+}
+else {
+  printf("No");
+}
+  
+return 0;
+}
+
+
+10. Write a C program that takes four numbers from the user and prints to the terminal “yes” if the difference between any two numbers is more than 10. “NO” otherwise.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+
+if((-10 <= (num1-num2) && (num1-num2) <= 10) && (-10 <= (num1-num3) && (num1-num3) <= 10) && (-10 <= (num1-num4) && (num1-num4) <= 10) && (-10 <= (num2-num3) && (num2-num3) <= 10) && (-10 <= (num2-num4) && (num2-num4) <= 10) && (-10 <= (num3-num4) && (num3-num4) <= 10)){
+    printf("No");
+  }
+else {
+    printf("Yes");
+  }
+  
+return 0;
+}
+
+11. Write a C program that takes four numbers from the user and prints to the terminal “summation is greater than product” if the summation of the four number is greater than their multiplication (product), “product is greater than summation” otherwise. If they are the same, it print “they are the same”.
+
+#include <stdio.h>
+
+int main() {
+
+int num1;
+int num2;
+int num3;
+int num4;
+
+
+printf("Enter a number.\n");
+scanf("%d", &num1);
+printf("Enter a number again.\n");
+scanf("%d" , &num2);
+printf("Enter a number again.\n");
+scanf("%d" , &num3);
+printf("Enter a number again.\n");
+scanf("%d" , &num4);
+
+
+int sum = num1+num2+num3+num4;
+int pro = num1*num2*num3*num4;
+
+if (sum==pro){
+  printf("They are the same.");
+}
+else if (sum<pro){
+  printf("Product is greater than summation.");
+}
+else {
+  printf("Summation is greater than product");
+}
+  
+return 0;
+}
+
+12. Declare an array of size 5. Read 5 numbers from the user (keyboard) and insert them into the array. Find the largest and smallest numbers of the array and print them to the terminal.
+
+#include <stdio.h>
+
+int main() {
+  
+int list[5];
+  
+printf("Enter a number.\n");
+scanf("%d", &list[1]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[2]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[3]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[4]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[5]);
+
+int sn = list[1];
+if (sn > list[2]) {
+  sn = list[2];
+}
+if (sn > list[3]) {
+  sn = list[3];
+}
+if (sn > list[4]) {
+  sn = list[4];
+}
+if (sn > list[5]) {
+  sn = list[5];
+}
+  
+int ln = list[1];
+if (ln < list[2]) {
+  ln = list[2];
+}
+if (ln < list[3]) {
+  ln = list[3];
+}
+if (ln < list[4]) {
+  ln = list[4];
+}
+if (ln < list[5]) {
+  ln = list[5];
+}
+
+printf("The smallest number: %d\nThe largest number: %d", sn, ln);
+  
+return 0;
+}
+
+13. Declare an array of size 5. Read 5 numbers from the user (keyboard). Use the following algorithm to put these numbers in an increasing order: Compare the first and second numbers, if the first-location number is bigger than the second-location number, switch their places. Next, compare the second-location number to the third-location number. Do the same and keep going like that until the end of the list. After this first round, the largest number should be in the last location. Start over again and do the comparison between the first and second-location number and swapping them if necessary and so forth. After the second round, the next largest number should be in the next-to-last location in the list. Once you finish putting numbers in order, print all the numbers to the terminal one by one.
+
+#include <stdio.h>
+
+int main() {
+  
+int list[5];
+  
+printf("Enter a number.\n");
+scanf("%d", &list[0]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[1]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[2]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[3]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[4]);
+
+int x = list[0];
+if (list[0] > list[1]) {
+  list[0] = list[1];
+  list[1] = x;
+}
+x = list[1];
+if (list[1] > list[2]) {
+  list[1] = list[2];
+  list[2] = x;
+}
+x = list[2];
+if (list[2] > list[3]) {
+  list[2] = list[3];
+  list[3] = x;
+}
+x = list[3];
+if (list[3] > list[4]) {
+  list[3] = list[4];
+  list[4] = x;
+}
+x= list[0];
+if (list[0] > list[1]) {
+list[0] = list[1];
+list[1] = x;
+}
+x = list[1];
+if (list[1] > list[2]) {
+  list[1] = list[2];
+  list[2] = x;
+}
+x = list[2];
+if (list[2] > list[3]) {
+  list[2] = list[3];
+  list[3] = x;
+}
+x= list[0];
+if (list[0] > list[1]) {
+list[0] = list[1];
+list[1] = x;
+}
+x = list[1];
+if (list[1] > list[2]) {
+  list[1] = list[2];
+  list[2] = x;
+}
+x= list[0];
+if (list[0] > list[1]) {
+list[0] = list[1];
+list[1] = x;
+}
+
+printf("%d %d %d %d %d", list[0], list[1], list[2], list[3], list[4]);
+
+return 0;
+}
+
+14. Declare an array of size 5. Read 5 numbers from the user (keyboard). Read another number (target)from the user. Design an algorithm so that it will check if the target value is in the list or not. If so, your program should print “it exists”, “does not exist” otherwise.
+
+#include <stdio.h>
+
+int main() {
+  
+int list[5];
+int ta;
+  
+printf("Enter a number.\n");
+scanf("%d", &list[0]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[1]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[2]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[3]);
+printf("Enter a number again.\n");
+scanf("%d" , &list[4]);
+printf("Enter your target.\n");
+scanf("%d" , &ta);
+
+if (list[0]==ta || list[1]==ta || list[2]==ta || list[3]==ta || list[4]==ta) {
+  printf("It exists.");
+}
+else {
+  printf("It doesn't exist.");
+}
+return 0;
+}
+
+15. Declare two arrays of size 5. Read 5 numbers from the user (keyboard) into the first array and another set of 5 numbers into the second array. Design an algorithm that counts and prints the number of the same numbers in the same locations in both arrays.
+
+#include <stdio.h>
+
+int main() {
+  
+int ar1[5];
+int ar2[5];
+  
+printf("Enter a number for first list.\n");
+scanf("%d", &ar1[0]);
+printf("Enter a number for first list again.\n");
+scanf("%d" , &ar1[1]);
+printf("Enter a number for first list again.\n");
+scanf("%d" , &ar1[2]);
+printf("Enter a number for first list again.\n");
+scanf("%d" , &ar1[3]);
+printf("Enter a number for first list again.\n");
+scanf("%d" , &ar1[4]);
+
+printf("Enter a number for second list.\n");
+scanf("%d", &ar2[0]);
+printf("Enter a number for second list again.\n");
+scanf("%d" , &ar2[1]);
+printf("Enter a number for second list again.\n");
+scanf("%d" , &ar2[2]);
+printf("Enter a number for second list again.\n");
+scanf("%d" , &ar2[3]);
+printf("Enter a number for second list again.\n");
+scanf("%d" , &ar2[4]);
+
+int num=0;
+if (ar1[0]==ar2[0]) {
+  num++;
+}
+if (ar1[1]==ar2[1]) {
+  num++;
+}
+if (ar1[2]==ar2[2]) {
+  num++;
+}
+if (ar1[3]==ar2[3]) {
+  num++;
+}
+if ((ar1[4]==ar2[4])) {
+  num++;
+}
+printf("The number of the same numbers in the same locations: %d", num);
+  
+return 0;
+}
+
+
+Erin Su Öz
